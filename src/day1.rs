@@ -1,14 +1,12 @@
 use crate::util::parse_numbers;
 use anyhow::Result;
 
-#[allow(dead_code)]
 fn q1(filename: &str) -> Result<usize> {
     let numbers = parse_numbers(filename)?;
     assert!(numbers.len() > 1);
     Ok(num_increasing(numbers))
 }
 
-#[allow(dead_code)]
 fn q2(filename: &str) -> Result<usize> {
     let numbers = parse_numbers(filename)?;
     assert!(numbers.len() > 2);
@@ -19,7 +17,6 @@ fn q2(filename: &str) -> Result<usize> {
     Ok(num_increasing(window))
 }
 
-#[allow(dead_code)]
 fn num_increasing(numbers: Vec<usize>) -> usize {
     let mut count = 0;
     let mut prev = numbers[0];
