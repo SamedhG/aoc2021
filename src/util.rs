@@ -3,16 +3,17 @@ use std::fs::File;
 use std::io::prelude::*;
 use std::io::BufReader;
 
-pub(crate) fn parse_numbers(filename: &str) -> Result<Vec<usize>> {
+pub(crate) fn parse_numbers(filename: &str, radix: u32) -> Result<Vec<usize>> {
     let v = parse_strings(filename)?;
-    Ok(v.iter().map(|l| l.parse::<usize>().unwrap()).collect())
+    Ok(v.iter()
+        .map(|l| usize::from_str_radix(l, radix).unwrap())
+        .collect())
 }
 
 pub(crate) fn parse_strings(filename: &str) -> Result<Vec<String>> {
     let f = File::open(filename)?;
     let reader = BufReader::new(f);
-    let v: Vec<String> = reader
-        .lines().map(Result::unwrap).collect();
+    let v: Vec<String> = reader.lines().map(Result::unwrap).collect();
     Ok(v)
 }
 
