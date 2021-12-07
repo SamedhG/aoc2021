@@ -10,11 +10,12 @@ pub(crate) fn parse_numbers(filename: &str, radix: u32) -> Result<Vec<usize>> {
         .collect())
 }
 
-pub(crate) fn parse_numbers_comma(filename: &str) -> Result<Vec<usize>> {
+pub(crate) fn parse_numbers_comma(filename: &str) -> Result<Vec<isize>> {
     let mut s = std::fs::read_to_string(filename)?;
     s.pop();
-    Ok(s.split(',').map(|n| usize::from_str_radix(n, 10).unwrap()).collect())
-    
+    Ok(s.split(',')
+        .map(|n| isize::from_str_radix(n, 10).unwrap())
+        .collect())
 }
 
 pub(crate) fn parse_strings(filename: &str) -> Result<Vec<String>> {
