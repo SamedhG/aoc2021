@@ -65,7 +65,7 @@ mod tests {
 
     #[test]
     fn test() {
-        assert_eq!(q1("./data/day2.txt").unwrap(), 1924923);
-        assert_eq!(q2("./data/day2.txt").unwrap(), 1982495697);
+        assert_eq!(q1("./data/day02.txt").unwrap(), 1924923);
+        assert_eq!(q2("./data/day02.txt").unwrap(), 1982495697);
     }
 }

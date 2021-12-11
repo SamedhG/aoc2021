@@ -40,7 +40,6 @@ fn q1(filename: &str) -> Result<usize> {
     Ok(score)
 }
 
-
 fn q2(filename: &str) -> Result<usize> {
     let codes = parse_strings(filename)?;
     let mut scores = Vec::new();
@@ -94,9 +93,8 @@ fn q2(filename: &str) -> Result<usize> {
     }
     scores.sort();
     //dbg!(&scores);
-    Ok(scores[scores.len()/2])
+    Ok(scores[scores.len() / 2])
 }
-
 
 #[cfg(test)]
 mod tests {
@@ -104,6 +102,6 @@ mod tests {
     #[test]
     fn test() {
         assert_eq!(q1("./data/day10.txt").unwrap(), 319329);
-        assert_eq!(q2("./data/day10.txt").unwrap(), 1589);
+        assert_eq!(q2("./data/day10.txt").unwrap(), 3515583998);
     }
 }

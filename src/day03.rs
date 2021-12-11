@@ -79,7 +79,7 @@ mod tests {
     use super::*;
     #[test]
     fn test() {
-        assert_eq!(q1("./data/day3.txt").unwrap(), 3429254);
-        assert_eq!(q2("./data/day3.txt").unwrap(), 5410338);
+        assert_eq!(q1("./data/day03.txt").unwrap(), 3429254);
+        assert_eq!(q2("./data/day03.txt").unwrap(), 5410338);
     }
 }

@@ -1,21 +1,21 @@
 #[allow(dead_code)]
-mod day1;
+mod day01;
+#[allow(dead_code)]
+mod day02;
+#[allow(dead_code)]
+mod day03;
+#[allow(dead_code)]
+mod day04;
+#[allow(dead_code)]
+mod day05;
+#[allow(dead_code)]
+mod day06;
+#[allow(dead_code)]
+mod day07;
+#[allow(dead_code)]
+mod day08;
+#[allow(dead_code)]
+mod day09;
 #[allow(dead_code)]
 mod day10;
-#[allow(dead_code)]
-mod day2;
-#[allow(dead_code)]
-mod day3;
-#[allow(dead_code)]
-mod day4;
-#[allow(dead_code)]
-mod day5;
-#[allow(dead_code)]
-mod day6;
-#[allow(dead_code)]
-mod day7;
-#[allow(dead_code)]
-mod day8;
-#[allow(dead_code)]
-mod day9;
 mod util;

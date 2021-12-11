@@ -34,7 +34,7 @@ mod tests {
     use super::*;
     #[test]
     fn test() {
-        assert_eq!(q1("./data/day1.txt").unwrap(), 1548);
-        assert_eq!(q2("./data/day1.txt").unwrap(), 1589);
+        assert_eq!(q1("./data/day01.txt").unwrap(), 1548);
+        assert_eq!(q2("./data/day01.txt").unwrap(), 1589);
     }
 }
