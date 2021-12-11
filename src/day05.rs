@@ -92,7 +92,7 @@ fn q2(filename: &str) -> Result<usize> {
 
 #[cfg(test)]
 mod tests {
-    use super::*;
+    //use super::*;
 
     #[test]
     fn test() {
