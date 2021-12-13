@@ -1,5 +1,6 @@
 use crate::util::parse_strings;
 use anyhow::Result;
+use rayon::prelude::*;
 use std::collections::HashMap;
 use std::collections::HashSet;
 type Map = HashMap<String, Vec<String>>;
@@ -72,7 +73,7 @@ fn count_paths_double(
     } else {
         map.get(from)
             .unwrap()
-            .iter()
+            .par_iter()
             .filter(|cave| *cave != "start")
             .map(|cave| {
                 if is_big_cave(cave) {
